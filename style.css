@@ -1195,6 +1195,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: 16px;
 }
 
+/* Invert dark/black SVG icons to crisp white on dark background */
+.icon-invert,
+.stack-chip-icon img.icon-invert,
+.marquee-item img.icon-invert {
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.95;
+}
+
 .stack-chip-name {
   font-size: 0.83rem;
   font-weight: 500;
