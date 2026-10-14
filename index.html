@@ -270,145 +270,51 @@
         </button>
       </div>
 
-      <!-- BENTO GRID -->
-      <div class="skills-bento-grid">
-
-        <!-- HERO SPOTLIGHT BENTO CARD (Always Anchored) -->
-        <div class="bento-card bento-hero glass-card" data-category="all frontend backend database quality">
-          <div class="bento-hero-header">
-            <div>
-              <span class="bento-badge">SYSTEMS ARCHITECTURE MATRIX</span>
-              <h3 class="bento-title">Full-Stack Execution &amp; Scalability Pipeline</h3>
-              <p class="bento-desc">4+ years designing and shipping production SPAs, reactive real-time microservices, ACID-compliant databases, and automated AWS pipelines.</p>
-            </div>
-            <div class="bento-hero-badges">
-              <span class="bento-status-chip">
-                <span class="pulse-indicator"></span>
-                <span>Production Proven</span>
-              </span>
-              <span class="bento-metric-chip">4+ Years Experience</span>
-            </div>
-          </div>
-
-          <!-- ANIMATED CONDUIT PIPELINE FLOW -->
-          <div class="arch-pipeline">
-            <div class="arch-pipeline-label">
-              <span class="pipeline-status-text"><span class="pulse-indicator"></span> ARCHITECTURE EXECUTION PIPELINE</span>
-              <span class="arch-hint"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Click node to filter domain</span>
-            </div>
-            <div class="arch-pipeline-track">
-              <div class="arch-node" data-stage="frontend" tabindex="0" role="button" aria-label="Filter Frontend stack">
-                <div class="arch-node-top">
-                  <span class="arch-step">01. UI LAYER</span>
-                </div>
-                <div class="arch-tech">React 19 &middot; TypeScript</div>
-                <div class="arch-chips">
-                  <span class="arch-mini-chip">Tailwind</span>
-                  <span class="arch-mini-chip">Zustand</span>
-                  <span class="arch-mini-chip">Vite</span>
-                </div>
-              </div>
-
-              <div class="arch-conduit">
-                <div class="conduit-pulse"></div>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-              </div>
-
-              <div class="arch-node" data-stage="backend" tabindex="0" role="button" aria-label="Filter Backend stack">
-                <div class="arch-node-top">
-                  <span class="arch-step">02. API GATEWAY</span>
-                </div>
-                <div class="arch-tech">Node.js &middot; Express &middot; Sockets</div>
-                <div class="arch-chips">
-                  <span class="arch-mini-chip">Socket.io</span>
-                  <span class="arch-mini-chip">REST APIs</span>
-                  <span class="arch-mini-chip">Zod</span>
-                </div>
-              </div>
-
-              <div class="arch-conduit">
-                <div class="conduit-pulse"></div>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-              </div>
-
-              <div class="arch-node" data-stage="database" tabindex="0" role="button" aria-label="Filter Database & Cloud stack">
-                <div class="arch-node-top">
-                  <span class="arch-step">03. DATA LAYER</span>
-                </div>
-                <div class="arch-tech">PostgreSQL &middot; Prisma ORM</div>
-                <div class="arch-chips">
-                  <span class="arch-mini-chip">Prisma</span>
-                  <span class="arch-mini-chip">MongoDB</span>
-                  <span class="arch-mini-chip">Supabase</span>
-                </div>
-              </div>
-
-              <div class="arch-conduit">
-                <div class="conduit-pulse"></div>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-              </div>
-
-              <div class="arch-node" data-stage="quality" tabindex="0" role="button" aria-label="Filter Testing & QA stack">
-                <div class="arch-node-top">
-                  <span class="arch-step">04. INFRA &amp; QA</span>
-                </div>
-                <div class="arch-tech">AWS S3/EC2 &middot; Cypress</div>
-                <div class="arch-chips">
-                  <span class="arch-mini-chip">AWS Cloud</span>
-                  <span class="arch-mini-chip">Jenkins</span>
-                  <span class="arch-mini-chip">Cypress</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       <!-- SLEEK HORIZONTAL STACK ROWS (Option 2) -->
       <div class="stack-rows-container" id="stackRows">
 
         <!-- 1. FRONTEND STACK ROW -->
-        <div class="stack-row glass-card" data-category="frontend">
+        <div class="stack-row row-frontend" data-category="frontend">
           <div class="stack-row-lead">
-            <div class="stack-cat-icon icon-cyan">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="row-glow-dot dot-cyan"></span>
+            <div class="stack-cat-squircle squircle-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
-            <div class="stack-lead-info">
-              <h3 class="stack-row-title">Frontend</h3>
-              <span class="stack-badge badge-cyan">8 Technologies</span>
-            </div>
+            <h3 class="stack-row-title">Frontend</h3>
           </div>
           <div class="stack-row-chips">
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-react" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React 19" /></div>
               <span class="stack-chip-name">React 19</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-typescript" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></div>
               <span class="stack-chip-name">TypeScript</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-javascript" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
               <span class="stack-chip-name">JavaScript ES6+</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-angular" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></div>
               <span class="stack-chip-name">Angular</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-tailwind" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" /></div>
               <span class="stack-chip-name">Tailwind CSS</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-zustand" tabindex="0">
               <div class="stack-chip-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 9V6M12 15v3M9.5 10.5l-3-3M14.5 13.5l3 3M9.5 13.5l-3 3M14.5 10.5l3-3"/></svg>
               </div>
               <span class="stack-chip-name">Zustand</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-redux" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux Toolkit" /></div>
               <span class="stack-chip-name">Redux Toolkit</span>
             </div>
-            <div class="stack-chip chip-cyan" tabindex="0">
+            <div class="stack-chip chip-tanstack" tabindex="0">
               <div class="stack-chip-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
               </div>
@@ -418,54 +324,52 @@
         </div>
 
         <!-- 2. BACKEND STACK ROW -->
-        <div class="stack-row glass-card" data-category="backend">
+        <div class="stack-row row-backend" data-category="backend">
           <div class="stack-row-lead">
-            <div class="stack-cat-icon icon-purple">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1" fill="#a78bfa"/><circle cx="6" cy="18" r="1" fill="#a78bfa"/></svg>
+            <span class="row-glow-dot dot-purple"></span>
+            <div class="stack-cat-squircle squircle-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
-            <div class="stack-lead-info">
-              <h3 class="stack-row-title">Backend</h3>
-              <span class="stack-badge badge-purple">8 Core Engines</span>
-            </div>
+            <h3 class="stack-row-title">Backend</h3>
           </div>
           <div class="stack-row-chips">
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-node" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /></div>
               <span class="stack-chip-name">Node.js</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-express" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="icon-invert" /></div>
               <span class="stack-chip-name">Express.js</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-socket" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket.io" class="icon-invert" /></div>
               <span class="stack-chip-name">Socket.io</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-rest" tabindex="0">
               <div class="stack-chip-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
               <span class="stack-chip-name">RESTful APIs</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-prisma" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma ORM" class="icon-invert" /></div>
               <span class="stack-chip-name">Prisma ORM</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-jwt" tabindex="0">
               <div class="stack-chip-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               </div>
               <span class="stack-chip-name">JWT &amp; Auth</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-zod" tabindex="0">
               <div class="stack-chip-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
               <span class="stack-chip-name">Zod Validation</span>
             </div>
-            <div class="stack-chip chip-purple" tabindex="0">
+            <div class="stack-chip chip-razorpay" tabindex="0">
               <div class="stack-chip-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><circle cx="6" cy="15" r="1"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
               </div>
               <span class="stack-chip-name">Razorpay Gateway</span>
             </div>
@@ -473,46 +377,44 @@
         </div>
 
         <!-- 3. DATABASES & CLOUD STACK ROW -->
-        <div class="stack-row glass-card" data-category="database">
+        <div class="stack-row row-database" data-category="database">
           <div class="stack-row-lead">
-            <div class="stack-cat-icon icon-green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v4c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 9v4c0 1.66 4.03 3 9 3s9-1.34 9-3V9"/><path d="M3 13v4c0 1.66 4.03 3 9 3s9-1.34 9-3v-4"/></svg>
+            <span class="row-glow-dot dot-amber"></span>
+            <div class="stack-cat-squircle squircle-amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
             </div>
-            <div class="stack-lead-info">
-              <h3 class="stack-row-title">Databases &amp; Cloud</h3>
-              <span class="stack-badge badge-green">8 Platforms</span>
-            </div>
+            <h3 class="stack-row-title">Databases &amp; Cloud</h3>
           </div>
           <div class="stack-row-chips">
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-postgres" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></div>
               <span class="stack-chip-name">PostgreSQL</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-mongo" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
               <span class="stack-chip-name">MongoDB</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-supabase" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" /></div>
               <span class="stack-chip-name">Supabase</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-firestore" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firestore" /></div>
               <span class="stack-chip-name">Firestore</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-aws" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS EC2 & S3" /></div>
               <span class="stack-chip-name">AWS EC2 &amp; S3</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-vite" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" /></div>
               <span class="stack-chip-name">Vite</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-git" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" /></div>
               <span class="stack-chip-name">Git &amp; GitHub</span>
             </div>
-            <div class="stack-chip chip-green" tabindex="0">
+            <div class="stack-chip chip-jenkins" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" /></div>
               <span class="stack-chip-name">Jenkins &amp; Gulp</span>
             </div>
@@ -520,42 +422,40 @@
         </div>
 
         <!-- 4. TESTING & QUALITY STACK ROW -->
-        <div class="stack-row glass-card" data-category="quality">
+        <div class="stack-row row-quality" data-category="quality">
           <div class="stack-row-lead">
-            <div class="stack-cat-icon icon-orange">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M9 3v8L4.5 17A2 2 0 0 0 6.3 20h11.4a2 2 0 0 0 1.8-3L15 11V3"/><path d="M6 16h12"/></svg>
+            <span class="row-glow-dot dot-green"></span>
+            <div class="stack-cat-squircle squircle-green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <div class="stack-lead-info">
-              <h3 class="stack-row-title">Testing &amp; QA</h3>
-              <span class="stack-badge badge-orange">6 Standards</span>
-            </div>
+            <h3 class="stack-row-title">Testing &amp; Quality</h3>
           </div>
           <div class="stack-row-chips">
-            <div class="stack-chip chip-orange" tabindex="0">
+            <div class="stack-chip chip-cypress" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress E2E" /></div>
               <span class="stack-chip-name">Cypress E2E</span>
             </div>
-            <div class="stack-chip chip-orange" tabindex="0">
+            <div class="stack-chip chip-jest" tabindex="0">
               <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" /></div>
               <span class="stack-chip-name">Jest</span>
             </div>
-            <div class="stack-chip chip-orange" tabindex="0">
+            <div class="stack-chip chip-supertest" tabindex="0">
               <div class="stack-chip-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.4 22h11.2a2 2 0 0 0 1.71-2.7L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="7" y1="15" x2="17" y2="15"/></svg>
               </div>
               <span class="stack-chip-name">Supertest</span>
             </div>
-            <div class="stack-chip chip-orange" tabindex="0">
-              <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg" alt="Jasmine &amp; Karma" /></div>
+            <div class="stack-chip chip-jasmine" tabindex="0">
+              <div class="stack-chip-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg" alt="Jasmine & Karma" /></div>
               <span class="stack-chip-name">Jasmine &amp; Karma</span>
             </div>
-            <div class="stack-chip chip-orange" tabindex="0">
+            <div class="stack-chip chip-cleanarch" tabindex="0">
               <div class="stack-chip-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
               </div>
               <span class="stack-chip-name">Clean Architecture</span>
             </div>
-            <div class="stack-chip chip-orange" tabindex="0">
+            <div class="stack-chip chip-agile" tabindex="0">
               <div class="stack-chip-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
               </div>
@@ -563,8 +463,6 @@
             </div>
           </div>
         </div>
-
-      </div>
 
       </div>
     </div>
