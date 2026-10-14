@@ -1019,7 +1019,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 #skills .section-subtitle {
-  max-width: 950px;
+  max-width: 100%;
 }
 
 .stack-rows-container {
