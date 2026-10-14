@@ -292,82 +292,88 @@
 
           <!-- ANIMATED CONDUIT PIPELINE FLOW -->
           <div class="arch-pipeline">
-            <div class="arch-node" data-stage="frontend">
-              <div class="arch-node-top">
-                <span class="arch-step">01. UI LAYER</span>
-                <span class="arch-score-pill score-cyan">95%</span>
-              </div>
-              <div class="arch-tech">React 19 &middot; TypeScript</div>
-              <div class="arch-bar-track">
-                <div class="arch-bar-fill fill-cyan" style="width: 95%"></div>
-              </div>
-              <div class="arch-chips">
-                <span class="arch-mini-chip">Tailwind</span>
-                <span class="arch-mini-chip">Zustand</span>
-                <span class="arch-mini-chip">Vite</span>
-              </div>
+            <div class="arch-pipeline-label">
+              <span class="pipeline-status-text"><span class="pulse-indicator"></span> ARCHITECTURE EXECUTION PIPELINE</span>
+              <span class="arch-hint"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> Click node to filter domain</span>
             </div>
+            <div class="arch-pipeline-track">
+              <div class="arch-node" data-stage="frontend" tabindex="0" role="button" aria-label="Filter Frontend stack">
+                <div class="arch-node-top">
+                  <span class="arch-step">01. UI LAYER</span>
+                  <span class="arch-score-pill score-cyan">95%</span>
+                </div>
+                <div class="arch-tech">React 19 &middot; TypeScript</div>
+                <div class="arch-bar-track">
+                  <div class="arch-bar-fill fill-cyan" style="width: 95%"></div>
+                </div>
+                <div class="arch-chips">
+                  <span class="arch-mini-chip">Tailwind</span>
+                  <span class="arch-mini-chip">Zustand</span>
+                  <span class="arch-mini-chip">Vite</span>
+                </div>
+              </div>
 
-            <div class="arch-conduit">
-              <div class="conduit-pulse"></div>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
+              <div class="arch-conduit">
+                <div class="conduit-pulse"></div>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
 
-            <div class="arch-node" data-stage="backend">
-              <div class="arch-node-top">
-                <span class="arch-step">02. API GATEWAY</span>
-                <span class="arch-score-pill score-purple">88%</span>
+              <div class="arch-node" data-stage="backend" tabindex="0" role="button" aria-label="Filter Backend stack">
+                <div class="arch-node-top">
+                  <span class="arch-step">02. API GATEWAY</span>
+                  <span class="arch-score-pill score-purple">92%</span>
+                </div>
+                <div class="arch-tech">Node.js &middot; Express &middot; Sockets</div>
+                <div class="arch-bar-track">
+                  <div class="arch-bar-fill fill-purple" style="width: 92%"></div>
+                </div>
+                <div class="arch-chips">
+                  <span class="arch-mini-chip">Socket.io</span>
+                  <span class="arch-mini-chip">REST APIs</span>
+                  <span class="arch-mini-chip">Zod</span>
+                </div>
               </div>
-              <div class="arch-tech">Node.js &middot; Express &middot; Sockets</div>
-              <div class="arch-bar-track">
-                <div class="arch-bar-fill fill-purple" style="width: 88%"></div>
-              </div>
-              <div class="arch-chips">
-                <span class="arch-mini-chip">Socket.io</span>
-                <span class="arch-mini-chip">REST APIs</span>
-                <span class="arch-mini-chip">Zod</span>
-              </div>
-            </div>
 
-            <div class="arch-conduit">
-              <div class="conduit-pulse"></div>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
+              <div class="arch-conduit">
+                <div class="conduit-pulse"></div>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
 
-            <div class="arch-node" data-stage="database">
-              <div class="arch-node-top">
-                <span class="arch-step">03. DATA LAYER</span>
-                <span class="arch-score-pill score-green">85%</span>
+              <div class="arch-node" data-stage="database" tabindex="0" role="button" aria-label="Filter Database & Cloud stack">
+                <div class="arch-node-top">
+                  <span class="arch-step">03. DATA LAYER</span>
+                  <span class="arch-score-pill score-green">88%</span>
+                </div>
+                <div class="arch-tech">PostgreSQL &middot; Prisma ORM</div>
+                <div class="arch-bar-track">
+                  <div class="arch-bar-fill fill-green" style="width: 88%"></div>
+                </div>
+                <div class="arch-chips">
+                  <span class="arch-mini-chip">Prisma</span>
+                  <span class="arch-mini-chip">MongoDB</span>
+                  <span class="arch-mini-chip">Supabase</span>
+                </div>
               </div>
-              <div class="arch-tech">PostgreSQL &middot; Prisma ORM</div>
-              <div class="arch-bar-track">
-                <div class="arch-bar-fill fill-green" style="width: 85%"></div>
-              </div>
-              <div class="arch-chips">
-                <span class="arch-mini-chip">Prisma</span>
-                <span class="arch-mini-chip">MongoDB</span>
-                <span class="arch-mini-chip">Firestore</span>
-              </div>
-            </div>
 
-            <div class="arch-conduit">
-              <div class="conduit-pulse"></div>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-            </div>
+              <div class="arch-conduit">
+                <div class="conduit-pulse"></div>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </div>
 
-            <div class="arch-node" data-stage="quality">
-              <div class="arch-node-top">
-                <span class="arch-step">04. CLOUD INFRA</span>
-                <span class="arch-score-pill score-orange">88%</span>
-              </div>
-              <div class="arch-tech">AWS S3/EC2 &middot; Cypress</div>
-              <div class="arch-bar-track">
-                <div class="arch-bar-fill fill-orange" style="width: 88%"></div>
-              </div>
-              <div class="arch-chips">
-                <span class="arch-mini-chip">AWS Cloud</span>
-                <span class="arch-mini-chip">Jenkins</span>
-                <span class="arch-mini-chip">Cypress</span>
+              <div class="arch-node" data-stage="quality" tabindex="0" role="button" aria-label="Filter Testing & QA stack">
+                <div class="arch-node-top">
+                  <span class="arch-step">04. INFRA &amp; QA</span>
+                  <span class="arch-score-pill score-orange">90%</span>
+                </div>
+                <div class="arch-tech">AWS S3/EC2 &middot; Cypress</div>
+                <div class="arch-bar-track">
+                  <div class="arch-bar-fill fill-orange" style="width: 90%"></div>
+                </div>
+                <div class="arch-chips">
+                  <span class="arch-mini-chip">AWS Cloud</span>
+                  <span class="arch-mini-chip">Jenkins</span>
+                  <span class="arch-mini-chip">Cypress</span>
+                </div>
               </div>
             </div>
           </div>
@@ -381,10 +387,10 @@
             </div>
             <div class="bento-header-info">
               <div class="bento-header-meta">
-                <h3 class="bento-card-title">Frontend Engineering</h3>
+                <h3 class="bento-card-title">Frontend Architecture</h3>
                 <span class="bento-pill-accent">8 Technologies</span>
               </div>
-              <span class="bento-card-sub">Component architecture, custom hooks &amp; responsive interfaces</span>
+              <span class="bento-card-sub">Component trees, custom reactive hooks &amp; responsive interfaces</span>
             </div>
           </div>
 
@@ -392,56 +398,81 @@
             <!-- 1. React 19 -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React 19" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React 19" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">React 19</span>
+                  <span class="pill-badge badge-cyan">CORE</span>
                 </div>
-                <span class="glass-pill-title">React 19</span>
               </div>
               <div class="glass-pill-sub">Hooks &middot; Virtual DOM &middot; Component Architecture</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 2. TypeScript -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">TypeScript</span>
+                  <span class="pill-badge badge-cyan">STRICT</span>
                 </div>
-                <span class="glass-pill-title">TypeScript</span>
               </div>
               <div class="glass-pill-sub">Strict Typing &middot; Generics &middot; Interfaces</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 3. JavaScript ES6+ -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">JavaScript ES6+</span>
+                  <span class="pill-badge badge-cyan">EXPERT</span>
                 </div>
-                <span class="glass-pill-title">JavaScript ES6+</span>
               </div>
               <div class="glass-pill-sub">Async/Await &middot; Web Audio API &middot; Event Loop</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 4. Angular -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Angular</span>
+                  <span class="pill-badge badge-cyan">MODULAR</span>
                 </div>
-                <span class="glass-pill-title">Angular</span>
               </div>
               <div class="glass-pill-sub">DI &middot; Modular Architecture &middot; RxJS Streams</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 82%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 5. Tailwind CSS -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Tailwind CSS</span>
+                  <span class="pill-badge badge-cyan">DESIGN</span>
                 </div>
-                <span class="glass-pill-title">Tailwind CSS</span>
               </div>
               <div class="glass-pill-sub">Design Tokens &middot; Glassmorphism &middot; Responsive</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 6. Zustand -->
@@ -450,20 +481,32 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 9V6M12 15v3M9.5 10.5l-3-3M14.5 13.5l3 3M9.5 13.5l-3 3M14.5 10.5l3-3"/></svg>
                 </div>
-                <span class="glass-pill-title">Zustand</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Zustand</span>
+                  <span class="pill-badge badge-cyan">ATOMIC</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Atomic Stores &middot; Fast Subscriptions &middot; UI State</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 7. Redux Toolkit -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux Toolkit" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux Toolkit" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Redux Toolkit</span>
+                  <span class="pill-badge badge-cyan">GLOBAL</span>
                 </div>
-                <span class="glass-pill-title">Redux Toolkit</span>
               </div>
               <div class="glass-pill-sub">Global Slices &middot; Async Thunks &middot; DevTools</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 88%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 8. TanStack Query -->
@@ -472,9 +515,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
                 </div>
-                <span class="glass-pill-title">TanStack Query</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">TanStack Query</span>
+                  <span class="pill-badge badge-cyan">ASYNC</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Server Caching &middot; Optimistic Updates &middot; Sync</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-cyan" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
           </div>
         </div>
@@ -487,7 +537,7 @@
             </div>
             <div class="bento-header-info">
               <div class="bento-header-meta">
-                <h3 class="bento-card-title">Backend &amp; API Architecture</h3>
+                <h3 class="bento-card-title">Backend &amp; Microservices</h3>
                 <span class="bento-pill-accent">8 Core Engines</span>
               </div>
               <span class="bento-card-sub">Event-driven Node runtimes, real-time sockets &amp; secure APIs</span>
@@ -498,34 +548,49 @@
             <!-- 1. Node.js -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Node.js</span>
+                  <span class="pill-badge badge-purple">RUNTIME</span>
                 </div>
-                <span class="glass-pill-title">Node.js</span>
               </div>
               <div class="glass-pill-sub">Event-Driven Architecture &middot; Streams &middot; I/O</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 2. Express.js -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="icon-invert" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="icon-invert" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Express.js</span>
+                  <span class="pill-badge badge-purple">ROUTING</span>
                 </div>
-                <span class="glass-pill-title">Express.js</span>
               </div>
               <div class="glass-pill-sub">Middleware Pipelines &middot; Controllers &middot; CORS</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 92%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 3. Socket.io -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket.io" class="icon-invert" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" alt="Socket.io" class="icon-invert" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Socket.io</span>
+                  <span class="pill-badge badge-purple">REALTIME</span>
                 </div>
-                <span class="glass-pill-title">Socket.io</span>
               </div>
               <div class="glass-pill-sub">WebSockets &middot; Live Room Broadcast &middot; Events</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 88%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 4. RESTful APIs -->
@@ -534,20 +599,32 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 </div>
-                <span class="glass-pill-title">RESTful APIs</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">RESTful APIs</span>
+                  <span class="pill-badge badge-purple">REST</span>
+                </div>
               </div>
               <div class="glass-pill-sub">HTTP Semantics &middot; Resource Modeling &middot; JSON</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 94%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 5. Prisma ORM -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma ORM" class="icon-invert" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma ORM" class="icon-invert" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Prisma ORM</span>
+                  <span class="pill-badge badge-purple">TYPE-SAFE</span>
                 </div>
-                <span class="glass-pill-title">Prisma ORM</span>
               </div>
               <div class="glass-pill-sub">Type-Safe Client &middot; Schema Migrations &middot; Relations</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 88%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 6. JWT & Auth -->
@@ -556,9 +633,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
                 </div>
-                <span class="glass-pill-title">JWT &amp; Auth</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">JWT &amp; Auth</span>
+                  <span class="pill-badge badge-purple">SECURITY</span>
+                </div>
               </div>
               <div class="glass-pill-sub">HttpOnly Cookies &middot; Bcrypt Hashing &middot; RBAC</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 7. Zod Validation -->
@@ -567,9 +651,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
                 </div>
-                <span class="glass-pill-title">Zod Validation</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Zod Validation</span>
+                  <span class="pill-badge badge-purple">GUARD</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Runtime Schema Guard &middot; Type Inference</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 92%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 8. Razorpay Gateway -->
@@ -578,9 +669,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><circle cx="6" cy="15" r="1"/></svg>
                 </div>
-                <span class="glass-pill-title">Razorpay Gateway</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Razorpay Gateway</span>
+                  <span class="pill-badge badge-purple">PAYMENT</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Webhook Verification &middot; Checkouts &middot; Orders</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-purple" style="width: 86%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
           </div>
         </div>
@@ -604,89 +702,129 @@
             <!-- 1. PostgreSQL -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">PostgreSQL</span>
+                  <span class="pill-badge badge-green">ACID</span>
                 </div>
-                <span class="glass-pill-title">PostgreSQL</span>
               </div>
               <div class="glass-pill-sub">ACID Transactions &middot; Foreign Keys &middot; Indexing</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 2. MongoDB -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">MongoDB</span>
+                  <span class="pill-badge badge-green">NOSQL</span>
                 </div>
-                <span class="glass-pill-title">MongoDB</span>
               </div>
               <div class="glass-pill-sub">Mongoose ODM &middot; Aggregation Pipelines &middot; BSON</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 92%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 3. Supabase -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Supabase</span>
+                  <span class="pill-badge badge-green">BAAS</span>
                 </div>
-                <span class="glass-pill-title">Supabase</span>
               </div>
               <div class="glass-pill-sub">Postgres BaaS &middot; Row-Level Security &middot; Realtime</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 86%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 4. Firestore -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firestore" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firestore" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Firestore</span>
+                  <span class="pill-badge badge-green">REALTIME</span>
                 </div>
-                <span class="glass-pill-title">Firestore</span>
               </div>
               <div class="glass-pill-sub">Real-Time Snapshots &middot; Cloud Document Sync</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 85%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 5. AWS EC2 & S3 -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS EC2 & S3" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS EC2 & S3" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">AWS EC2 &amp; S3</span>
+                  <span class="pill-badge badge-green">CLOUD</span>
                 </div>
-                <span class="glass-pill-title">AWS EC2 &amp; S3</span>
               </div>
               <div class="glass-pill-sub">Static Storage &middot; Cloud VM Instances &middot; IAM</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 85%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 6. Vite -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Vite</span>
+                  <span class="pill-badge badge-green">BUNDLER</span>
                 </div>
-                <span class="glass-pill-title">Vite</span>
               </div>
               <div class="glass-pill-sub">Fast HMR &middot; Rollup Production Bundling</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 94%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 7. Git & GitHub -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Git &amp; GitHub</span>
+                  <span class="pill-badge badge-green">VCS</span>
                 </div>
-                <span class="glass-pill-title">Git &amp; GitHub</span>
               </div>
               <div class="glass-pill-sub">Branch Workflows &middot; Code Reviews &middot; Git Flow</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 8. Jenkins & Gulp -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Jenkins &amp; Gulp</span>
+                  <span class="pill-badge badge-green">CI/CD</span>
                 </div>
-                <span class="glass-pill-title">Jenkins &amp; Gulp</span>
               </div>
               <div class="glass-pill-sub">Automated CI Pipelines &middot; Release Asset Tasks</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-green" style="width: 82%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
           </div>
         </div>
@@ -710,23 +848,33 @@
             <!-- 1. Cypress E2E -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress E2E" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress E2E" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Cypress E2E</span>
+                  <span class="pill-badge badge-orange">E2E</span>
                 </div>
-                <span class="glass-pill-title">Cypress E2E</span>
               </div>
               <div class="glass-pill-sub">30+ Comprehensive Flows &middot; Network Fixtures &middot; CI</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 92%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 2. Jest -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Jest</span>
+                  <span class="pill-badge badge-orange">UNIT</span>
                 </div>
-                <span class="glass-pill-title">Jest</span>
               </div>
               <div class="glass-pill-sub">Unit &amp; Component Tests &middot; Spies &middot; API Mocks</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">3+ Yrs</span>
+              </div>
             </div>
 
             <!-- 3. Supertest -->
@@ -735,20 +883,32 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L4.69 19.3A2 2 0 0 0 6.4 22h11.2a2 2 0 0 0 1.71-2.7L14 9.31V2"/><line x1="8.5" y1="2" x2="15.5" y2="2"/><line x1="7" y1="15" x2="17" y2="15"/></svg>
                 </div>
-                <span class="glass-pill-title">Supertest</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Supertest</span>
+                  <span class="pill-badge badge-orange">CONTRACT</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Express HTTP Contract Assertion &middot; Route Verification</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 88%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 4. Jasmine & Karma -->
             <div class="tech-glass-pill" tabindex="0">
               <div class="glass-pill-main">
-                <div class="glass-pill-icon">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg" alt="Jasmine &amp; Karma" />
+                <div class="glass-pill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jasmine/jasmine-original.svg" alt="Jasmine &amp; Karma" /></div>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Jasmine &amp; Karma</span>
+                  <span class="pill-badge badge-orange">SUITE</span>
                 </div>
-                <span class="glass-pill-title">Jasmine &amp; Karma</span>
               </div>
               <div class="glass-pill-sub">Browser Unit Suites &middot; 80%+ Code Coverage Regression</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 82%"></div></div>
+                <span class="pill-exp-tag">2+ Yrs</span>
+              </div>
             </div>
 
             <!-- 5. Clean Architecture -->
@@ -757,9 +917,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                 </div>
-                <span class="glass-pill-title">Clean Architecture</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Clean Architecture</span>
+                  <span class="pill-badge badge-orange">DESIGN</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Separation of Concerns &middot; Decoupled Business Layers</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 90%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
 
             <!-- 6. Agile & Scrum -->
@@ -768,9 +935,16 @@
                 <div class="glass-pill-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6"/><path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                 </div>
-                <span class="glass-pill-title">Agile &amp; Scrum</span>
+                <div class="glass-pill-header">
+                  <span class="glass-pill-title">Agile &amp; Scrum</span>
+                  <span class="pill-badge badge-orange">PROCESS</span>
+                </div>
               </div>
               <div class="glass-pill-sub">Sprint Execution &middot; Code Reviews &middot; Cross-Functional</div>
+              <div class="glass-pill-footer">
+                <div class="pill-meter-bar"><div class="pill-meter-fill fill-orange" style="width: 95%"></div></div>
+                <span class="pill-exp-tag">4+ Yrs</span>
+              </div>
             </div>
           </div>
         </div>

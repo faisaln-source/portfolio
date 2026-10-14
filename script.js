@@ -207,41 +207,79 @@ const revealObserver = new IntersectionObserver(
 revealEls.forEach((el) => revealObserver.observe(el));
 
 /* ================================
-   SKILLS BENTO — FILTER TABS
+   SKILLS BENTO — FILTER TABS & ARCH PIPELINE
    ================================ */
 const filterBtns = document.querySelectorAll(".skill-filter-btn");
 const bentoCards = document.querySelectorAll(".bento-card");
+const archNodes = document.querySelectorAll(".arch-node");
+
+function applySkillFilter(filter) {
+  // Update filter buttons
+  filterBtns.forEach((btn) => {
+    if (btn.getAttribute("data-filter") === filter) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+
+  // Highlight arch nodes
+  archNodes.forEach((node) => {
+    if (filter !== "all" && node.getAttribute("data-stage") === filter) {
+      node.classList.add("active-node");
+    } else {
+      node.classList.remove("active-node");
+    }
+  });
+
+  const bentoGrid = document.querySelector(".skills-bento-grid");
+  if (bentoGrid) {
+    if (filter === "all") {
+      bentoGrid.classList.remove("single-view");
+    } else {
+      bentoGrid.classList.add("single-view");
+    }
+  }
+
+  bentoCards.forEach((card, index) => {
+    const cat = card.getAttribute("data-category") || "";
+    if (filter === "all" || cat.includes(filter)) {
+      card.classList.remove("filter-hidden");
+      card.style.opacity = "0";
+      card.style.transform = "translateY(16px)";
+      setTimeout(() => {
+        card.style.transition = "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)";
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, 35 * (index + 1));
+    } else {
+      card.classList.add("filter-hidden");
+    }
+  });
+}
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    filterBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
     const filter = btn.getAttribute("data-filter");
-    const bentoGrid = document.querySelector(".skills-bento-grid");
+    applySkillFilter(filter);
+  });
+});
 
-    if (bentoGrid) {
-      if (filter === "all") {
-        bentoGrid.classList.remove("single-view");
-      } else {
-        bentoGrid.classList.add("single-view");
-      }
+archNodes.forEach((node) => {
+  node.addEventListener("click", () => {
+    const stage = node.getAttribute("data-stage");
+    applySkillFilter(stage);
+    
+    const targetCard = document.querySelector(`.bento-card[data-category="${stage}"]`);
+    if (targetCard) {
+      targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-
-    bentoCards.forEach((card) => {
-      const cat = card.getAttribute("data-category") || "";
-      if (filter === "all" || cat.includes(filter)) {
-        card.classList.remove("filter-hidden");
-        card.style.opacity = "0";
-        card.style.transform = "translateY(12px)";
-        setTimeout(() => {
-          card.style.transition = "all 0.35s ease";
-          card.style.opacity = "1";
-          card.style.transform = "translateY(0)";
-        }, 30);
-      } else {
-        card.classList.add("filter-hidden");
-      }
-    });
+  });
+  node.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      node.click();
+    }
   });
 });
 

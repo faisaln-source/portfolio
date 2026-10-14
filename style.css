@@ -835,34 +835,91 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ARCHITECTURE PIPELINE CONDUIT */
+/* ARCHITECTURE PIPELINE CONDUIT */
 .arch-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background: rgba(5, 5, 16, 0.75);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-top: 1.4rem;
+  backdrop-filter: blur(16px);
+  box-shadow: inset 0 0 30px rgba(0, 229, 255, 0.03);
+}
+.arch-pipeline-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.pipeline-status-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #34d399;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.arch-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--cyan);
+  opacity: 0.8;
+}
+.arch-pipeline-track {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  background: rgba(5, 5, 16, 0.65);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.1rem;
-  margin-top: 1.4rem;
   overflow-x: auto;
+  padding-bottom: 0.2rem;
 }
 .arch-node {
   flex: 1;
   min-width: 175px;
   text-align: left;
-  padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 10px;
-  transition: all 0.28s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  cursor: pointer;
+  user-select: none;
 }
-.arch-node:hover {
-  border-color: rgba(0, 229, 255, 0.35);
-  background: rgba(0, 229, 255, 0.04);
+.arch-node:hover,
+.arch-node.active-node {
+  border-color: rgba(0, 229, 255, 0.45);
+  background: rgba(0, 229, 255, 0.06);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+.arch-node[data-stage="backend"]:hover,
+.arch-node[data-stage="backend"].active-node {
+  border-color: rgba(167, 139, 250, 0.45);
+  background: rgba(167, 139, 250, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(167, 139, 250, 0.15);
+}
+.arch-node[data-stage="database"]:hover,
+.arch-node[data-stage="database"].active-node {
+  border-color: rgba(52, 211, 153, 0.45);
+  background: rgba(52, 211, 153, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(52, 211, 153, 0.15);
+}
+.arch-node[data-stage="quality"]:hover,
+.arch-node[data-stage="quality"].active-node {
+  border-color: rgba(251, 146, 60, 0.45);
+  background: rgba(251, 146, 60, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px rgba(251, 146, 60, 0.15);
 }
 .arch-node-top {
   display: flex;
@@ -1009,40 +1066,41 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .icon-orange { background: rgba(251, 146, 60, 0.12); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.25); }
 
 .bento-card-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.2;
 }
 .bento-card-sub {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
   display: block;
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* ===================================================
-   INTERACTIVE GLASS PILL GRID (DOMAIN ARCHITECTURE)
+   ULTRA-MODERN GLASS PILL GRID & CARDS
    =================================================== */
 
 .glass-pills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .tech-glass-pill {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  justify-content: space-between;
+  padding: 0.95rem 1.05rem;
+  background: rgba(15, 20, 38, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   cursor: pointer;
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
@@ -1059,9 +1117,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .tech-glass-pill:hover,
 .tech-glass-pill:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.055);
-  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-3px) scale(1.01);
+  background: rgba(20, 27, 50, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
   outline: none;
 }
 
@@ -1072,32 +1130,32 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Category-specific glowing accents */
 .bento-card[data-category="frontend"] .tech-glass-pill:hover {
-  border-color: rgba(0, 229, 255, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 229, 255, 0.12);
+  border-color: rgba(0, 229, 255, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.16);
 }
 .bento-card[data-category="frontend"] .tech-glass-pill::before {
   background: #00e5ff;
 }
 
 .bento-card[data-category="backend"] .tech-glass-pill:hover {
-  border-color: rgba(167, 139, 250, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.12);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(167, 139, 250, 0.16);
 }
 .bento-card[data-category="backend"] .tech-glass-pill::before {
   background: #a78bfa;
 }
 
 .bento-card[data-category="database"] .tech-glass-pill:hover {
-  border-color: rgba(52, 211, 153, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(52, 211, 153, 0.12);
+  border-color: rgba(52, 211, 153, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(52, 211, 153, 0.16);
 }
 .bento-card[data-category="database"] .tech-glass-pill::before {
   background: #34d399;
 }
 
 .bento-card[data-category="quality"] .tech-glass-pill:hover {
-  border-color: rgba(251, 146, 60, 0.4);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(251, 146, 60, 0.12);
+  border-color: rgba(251, 146, 60, 0.45);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(251, 146, 60, 0.16);
 }
 .bento-card[data-category="quality"] .tech-glass-pill::before {
   background: #fb923c;
@@ -1111,45 +1169,71 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
 }
 .glass-pill-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 .tech-glass-pill:hover .glass-pill-icon {
   transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.09);
 }
 .glass-pill-icon img {
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 .glass-pill-icon img.icon-invert {
   filter: brightness(0) invert(1);
 }
 .glass-pill-icon svg {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
+}
+.glass-pill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
 }
 .glass-pill-title {
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
+/* Micro Badges */
+.pill-badge {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.12rem 0.42rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.badge-cyan   { background: rgba(0, 229, 255, 0.12); color: var(--cyan); border: 1px solid rgba(0, 229, 255, 0.3); }
+.badge-purple { background: rgba(167, 139, 250, 0.12); color: #c4b5fd; border: 1px solid rgba(167, 139, 250, 0.3); }
+.badge-green  { background: rgba(52, 211, 153, 0.12); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
+.badge-orange { background: rgba(251, 146, 60, 0.12); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.3); }
+
 .glass-pill-sub {
   font-size: 0.72rem;
   color: var(--text-dim);
   font-family: var(--mono);
-  margin-top: 0.4rem;
+  margin-top: 0.45rem;
+  margin-bottom: 0.6rem;
   line-height: 1.35;
   white-space: nowrap;
   overflow: hidden;
@@ -1157,10 +1241,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: color 0.2s ease;
 }
 .tech-glass-pill:hover .glass-pill-sub {
-  color: #cbd5e1;
-}
-.tech-glass-pill:hover .glass-pill-sub {
   color: #e2e8f0;
+}
+
+/* Pill Footer: Meter + Exp */
+.glass-pill-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+.pill-meter-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pill-meter-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+.pill-exp-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tech-glass-pill:hover .pill-exp-tag {
+  color: var(--text-muted);
 }
 
 
