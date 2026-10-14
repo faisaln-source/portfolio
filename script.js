@@ -207,10 +207,10 @@ const revealObserver = new IntersectionObserver(
 revealEls.forEach((el) => revealObserver.observe(el));
 
 /* ================================
-   SKILLS BENTO — FILTER TABS & ARCH PIPELINE
+   SKILLS SECTION — FILTER TABS & ARCH PIPELINE (OPTION 2)
    ================================ */
 const filterBtns = document.querySelectorAll(".skill-filter-btn");
-const bentoCards = document.querySelectorAll(".bento-card");
+const stackRows = document.querySelectorAll(".stack-row");
 const archNodes = document.querySelectorAll(".arch-node");
 
 function applySkillFilter(filter) {
@@ -232,28 +232,19 @@ function applySkillFilter(filter) {
     }
   });
 
-  const bentoGrid = document.querySelector(".skills-bento-grid");
-  if (bentoGrid) {
-    if (filter === "all") {
-      bentoGrid.classList.remove("single-view");
-    } else {
-      bentoGrid.classList.add("single-view");
-    }
-  }
-
-  bentoCards.forEach((card, index) => {
-    const cat = card.getAttribute("data-category") || "";
+  stackRows.forEach((row, index) => {
+    const cat = row.getAttribute("data-category") || "";
     if (filter === "all" || cat.includes(filter)) {
-      card.classList.remove("filter-hidden");
-      card.style.opacity = "0";
-      card.style.transform = "translateY(16px)";
+      row.classList.remove("filter-hidden");
+      row.style.opacity = "0";
+      row.style.transform = "translateY(14px)";
       setTimeout(() => {
-        card.style.transition = "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)";
-        card.style.opacity = "1";
-        card.style.transform = "translateY(0)";
-      }, 35 * (index + 1));
+        row.style.transition = "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)";
+        row.style.opacity = "1";
+        row.style.transform = "translateY(0)";
+      }, 40 * (index + 1));
     } else {
-      card.classList.add("filter-hidden");
+      row.classList.add("filter-hidden");
     }
   });
 }
@@ -270,9 +261,9 @@ archNodes.forEach((node) => {
     const stage = node.getAttribute("data-stage");
     applySkillFilter(stage);
     
-    const targetCard = document.querySelector(`.bento-card[data-category="${stage}"]`);
-    if (targetCard) {
-      targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+    const targetRow = document.querySelector(`.stack-row[data-category="${stage}"]`);
+    if (targetRow) {
+      targetRow.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
   node.addEventListener("keydown", (e) => {
@@ -284,15 +275,15 @@ archNodes.forEach((node) => {
 });
 
 /* ================================
-   SKILLS BENTO — CURSOR SPOTLIGHT
+   SKILLS STACK ROWS — CURSOR SPOTLIGHT
    ================================ */
-bentoCards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
+stackRows.forEach((row) => {
+  row.addEventListener("mousemove", (e) => {
+    const rect = row.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", x + "px");
-    card.style.setProperty("--mouse-y", y + "px");
+    row.style.setProperty("--mouse-x", x + "px");
+    row.style.setProperty("--mouse-y", y + "px");
   });
 });
 

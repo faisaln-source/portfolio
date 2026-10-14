@@ -1008,46 +1008,109 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   100% { transform: translateX(12px); opacity: 0; }
 }
 
-/* BENTO CARDS (DOMAIN) */
-.bento-card-header {
+/* ===================================================
+   OPTION 2: SLEEK HORIZONTAL STACK ROWS
+   =================================================== */
+
+.stack-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.stack-row {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  margin-bottom: 1.2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 0.85rem;
+  gap: 2rem;
+  padding: 1.35rem 1.8rem;
+  background: rgba(12, 16, 32, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.bento-header-info {
-  flex: 1;
-  min-width: 0;
+
+/* Row Left Category Color Indicator Line */
+.stack-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, width 0.3s ease;
 }
-.bento-header-meta {
+
+/* Row Spotlight on hover */
+.stack-row::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.04), transparent 50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.stack-row:hover::after {
+  opacity: 1;
+}
+
+.stack-row > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Category Accent Borders & Background Highlights */
+.stack-row[data-category="frontend"]::before {
+  background: linear-gradient(180deg, #00e5ff, rgba(0, 229, 255, 0.3));
+}
+.stack-row[data-category="frontend"]:hover {
+  border-color: rgba(0, 229, 255, 0.28);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(0, 229, 255, 0.08);
+}
+
+.stack-row[data-category="backend"]::before {
+  background: linear-gradient(180deg, #a78bfa, rgba(167, 139, 250, 0.3));
+}
+.stack-row[data-category="backend"]:hover {
+  border-color: rgba(167, 139, 250, 0.28);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(167, 139, 250, 0.08);
+}
+
+.stack-row[data-category="database"]::before {
+  background: linear-gradient(180deg, #34d399, rgba(52, 211, 153, 0.3));
+}
+.stack-row[data-category="database"]:hover {
+  border-color: rgba(52, 211, 153, 0.28);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(52, 211, 153, 0.08);
+}
+
+.stack-row[data-category="quality"]::before {
+  background: linear-gradient(180deg, #fb923c, rgba(251, 146, 60, 0.3));
+}
+.stack-row[data-category="quality"]:hover {
+  border-color: rgba(251, 146, 60, 0.28);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(251, 146, 60, 0.08);
+}
+
+/* Lead Section: Icon + Category Name + Badge */
+.stack-row-lead {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
+  gap: 1rem;
+  min-width: 215px;
+  flex-shrink: 0;
+  padding-right: 1.6rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
-.bento-pill-accent {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  padding: 0.18rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(0, 229, 255, 0.1);
-  color: var(--cyan);
-  border: 1px solid rgba(0, 229, 255, 0.25);
-  white-space: nowrap;
-}
-.bento-card[data-category="frontend"] .bento-pill-accent { background: rgba(0, 229, 255, 0.1); color: var(--cyan); border-color: rgba(0, 229, 255, 0.25); }
-.bento-card[data-category="backend"] .bento-pill-accent  { background: rgba(167, 139, 250, 0.1); color: #c4b5fd; border-color: rgba(167, 139, 250, 0.25); }
-.bento-card[data-category="database"] .bento-pill-accent { background: rgba(52, 211, 153, 0.1); color: #34d399; border-color: rgba(52, 211, 153, 0.25); }
-.bento-card[data-category="quality"] .bento-pill-accent  { background: rgba(251, 146, 60, 0.1); color: #fb923c; border-color: rgba(251, 146, 60, 0.25); }
 
-.bento-card[data-category="frontend"]::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #00e5ff, rgba(0, 229, 255, 0.05)); }
-.bento-card[data-category="backend"]::before  { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #a78bfa, rgba(167, 139, 250, 0.05)); }
-.bento-card[data-category="database"]::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #34d399, rgba(52, 211, 153, 0.05)); }
-.bento-card[data-category="quality"]::before  { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #fb923c, rgba(251, 146, 60, 0.05)); }
-
-.bento-cat-icon {
+.stack-cat-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -1055,189 +1118,162 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
-.bento-cat-icon svg {
+
+.stack-row:hover .stack-cat-icon {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.stack-cat-icon svg {
   width: 22px;
   height: 22px;
 }
-.icon-cyan   { background: rgba(0, 229, 255, 0.12); color: var(--cyan); border: 1px solid rgba(0, 229, 255, 0.25); }
-.icon-purple { background: rgba(167, 139, 250, 0.12); color: #a78bfa; border: 1px solid rgba(167, 139, 250, 0.25); }
-.icon-green  { background: rgba(52, 211, 153, 0.12); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.25); }
-.icon-orange { background: rgba(251, 146, 60, 0.12); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.25); }
 
-.bento-card-title {
+.stack-lead-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stack-row-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text);
-  line-height: 1.2;
-}
-.bento-card-sub {
-  font-size: 0.76rem;
-  color: var(--text-muted);
-  display: block;
-  margin-top: 0.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: #fff;
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
-/* ===================================================
-   MINIMALIST SLEEK GLASS PILL GRID & CARDS
-   =================================================== */
-
-.glass-pills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
+.stack-badge {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  display: inline-block;
+  width: fit-content;
+  letter-spacing: 0.03em;
 }
 
-.tech-glass-pill {
-  position: relative;
+.badge-cyan {
+  background: rgba(0, 229, 255, 0.12);
+  color: var(--cyan);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+}
+.badge-purple {
+  background: rgba(167, 139, 250, 0.12);
+  color: #c4b5fd;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+.badge-green {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+.badge-orange {
+  background: rgba(251, 146, 60, 0.12);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.25);
+}
+
+/* Horizontal Flowing Chips */
+.stack-row-chips {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.8rem 1rem;
-  background: rgba(15, 20, 38, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 12px;
-  backdrop-filter: blur(14px);
+  flex: 1;
+}
+
+.stack-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--text);
   cursor: pointer;
+  user-select: none;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-.tech-glass-pill::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 3px; height: 100%;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.tech-glass-pill:hover,
-.tech-glass-pill:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(20, 27, 50, 0.85);
-  border-color: rgba(255, 255, 255, 0.18);
   outline: none;
 }
 
-.tech-glass-pill:hover::before,
-.tech-glass-pill:focus-visible::before {
-  opacity: 1;
+.stack-chip:hover,
+.stack-chip:focus-visible {
+  transform: translateY(-3px) scale(1.03);
 }
 
-/* Category-specific glowing accents */
-.bento-card[data-category="frontend"] .tech-glass-pill:hover {
-  border-color: rgba(0, 229, 255, 0.45);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 229, 255, 0.15);
-}
-.bento-card[data-category="frontend"] .tech-glass-pill::before {
-  background: #00e5ff;
-}
-
-.bento-card[data-category="backend"] .tech-glass-pill:hover {
-  border-color: rgba(167, 139, 250, 0.45);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.15);
-}
-.bento-card[data-category="backend"] .tech-glass-pill::before {
-  background: #a78bfa;
+/* Category-specific chip glow and accent */
+.chip-cyan:hover,
+.chip-cyan:focus-visible {
+  border-color: rgba(0, 229, 255, 0.5);
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 229, 255, 0.25);
+  color: #fff;
 }
 
-.bento-card[data-category="database"] .tech-glass-pill:hover {
-  border-color: rgba(52, 211, 153, 0.45);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(52, 211, 153, 0.15);
-}
-.bento-card[data-category="database"] .tech-glass-pill::before {
-  background: #34d399;
-}
-
-.bento-card[data-category="quality"] .tech-glass-pill:hover {
-  border-color: rgba(251, 146, 60, 0.45);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px rgba(251, 146, 60, 0.15);
-}
-.bento-card[data-category="quality"] .tech-glass-pill::before {
-  background: #fb923c;
+.chip-purple:hover,
+.chip-purple:focus-visible {
+  border-color: rgba(167, 139, 250, 0.5);
+  background: rgba(167, 139, 250, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.25);
+  color: #fff;
 }
 
-/* Pill Icon */
-.glass-pill-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+.chip-green:hover,
+.chip-green:focus-visible {
+  border-color: rgba(52, 211, 153, 0.5);
+  background: rgba(52, 211, 153, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(52, 211, 153, 0.25);
+  color: #fff;
+}
+
+.chip-orange:hover,
+.chip-orange:focus-visible {
+  border-color: rgba(251, 146, 60, 0.5);
+  background: rgba(251, 146, 60, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(251, 146, 60, 0.25);
+  color: #fff;
+}
+
+/* Chip Icon */
+.stack-chip-icon {
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-.tech-glass-pill:hover .glass-pill-icon {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.09);
-}
-.glass-pill-icon img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
-.glass-pill-icon img.icon-invert {
-  filter: brightness(0) invert(1);
-}
-.glass-pill-icon svg {
-  width: 18px;
-  height: 18px;
+  transition: transform 0.25s ease;
 }
 
-/* Pill Title */
-.glass-pill-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
-
-/* SINGLE VIEW SPANNING */
-.skills-bento-grid.single-view .bento-card:not(.bento-hero) {
-  grid-column: span 2;
-}
-.tile-icon-sym {
-  font-size: 1.1rem;
-  width: 22px;
-  text-align: center;
-  flex-shrink: 0;
-  color: var(--tile-accent, var(--cyan));
-}
-.tile-info {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.tile-badge {
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  font-family: var(--mono);
-  margin-top: 0.15rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tech-tile:hover {
-  transform: translateY(-2px);
-  border-color: var(--tile-accent, var(--cyan));
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35), 0 0 16px rgba(0, 229, 255, 0.12);
-}
-.tech-tile:hover img {
+.stack-chip:hover .stack-chip-icon {
   transform: scale(1.15);
 }
 
-/* CARD FILTER FADING */
-.bento-card.filter-hidden {
+.stack-chip-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stack-chip-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Chip Name */
+.stack-chip-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+/* Fading / Filtering */
+.stack-row.filter-hidden {
   display: none !important;
 }
 
@@ -1798,7 +1834,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .tech-tiles-grid { grid-template-columns: 1fr; }
   .skills-filter-nav { gap: 0.4rem; }
   .skill-filter-btn { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
-  .glass-pills-grid { grid-template-columns: 1fr; }
+  .stack-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+    padding: 1.25rem 1.4rem;
+  }
+  .stack-row-lead {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-right: 0;
+    padding-bottom: 0.85rem;
+    width: 100%;
+  }
+  .stack-row-chips {
+    width: 100%;
+    gap: 0.55rem;
+  }
+  .stack-chip {
+    padding: 0.45rem 0.85rem;
+  }
+  .stack-chip-name {
+    font-size: 0.82rem;
+  }
 
   .projects-grid { grid-template-columns: 1fr; }
   .projects-grid-5 { grid-template-columns: 1fr !important; }
@@ -1823,5 +1881,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero { padding: 100px 1rem 60px; }
   .about-stats { grid-template-columns: 1fr 1fr; }
   .proficiency-rings { grid-template-columns: 1fr; gap: 1.2rem; }
-  .bento-card { padding: 1.2rem; }
+  .stack-row { padding: 1.1rem; }
+  .stack-chip { padding: 0.4rem 0.75rem; font-size: 0.78rem; }
+  .stack-chip-icon { width: 17px; height: 17px; }
 }
+
