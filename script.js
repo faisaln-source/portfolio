@@ -343,15 +343,20 @@ contactForm.addEventListener("submit", async (e) => {
 
   await new Promise((r) => setTimeout(r, 1500));
 
-  // Mailto fallback
+  // Open Gmail web composer directly
   const subject = document.getElementById("contactSubject").value || "Portfolio Inquiry";
   const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-  const mailtoLink = `mailto:nfaisal712@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.location.href = mailtoLink;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=nfaisal712@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  const win = window.open(gmailUrl, "_blank");
+  if (!win || win.closed || typeof win.closed === "undefined") {
+    // Popup was blocked, fallback to direct location
+    window.location.href = gmailUrl;
+  }
 
   btnText.textContent = "Send Message";
   btnIcon.style.display = "";
-  formNote.textContent = "Your email client should open. Alternatively, email me directly!";
+  formNote.textContent = "Opening Gmail composer with your message pre-filled!";
   formNote.className = "form-note success";
   contactForm.reset();
 
